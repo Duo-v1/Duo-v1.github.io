@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b0f">
+  <meta name="description" content="Duo explores how actions cross between the real and generated worlds, from passing a drink to playing a game or changing the scene.">
+  <meta property="og:title" content="Duo: A Reciprocal World Model for Full-Duplex Interaction">
+  <meta property="og:description" content="Duo explores how actions cross between the real and generated worlds, from passing a drink to playing a game or changing the scene.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://jianchengpan.space/duov1-homepage/assets/hero-conversation.jpg">
+  <title>Duo: A Reciprocal World Model for Full-Duplex Interaction</title>
+  <link rel="canonical" href="https://jianchengpan.space/duov1-homepage/">
+  <link rel="icon" href="assets/duo-symbol.svg?v=brand-blue-1" type="image/svg+xml" sizes="any">
+  <link rel="stylesheet" href="assets/manrope-embedded.css">
+  <link rel="stylesheet" href="style.split-headings.css?v=experience-progress">
+  <script src="content.moments-nav.js?v=hero-autoplay-2" defer></script>
+  <script src="app.clean-details.js?v=hero-autoplay-2" defer></script>
+</head>
+<body>
+  <!-- Inline icon symbols. Tabler Icons and Simple Icons licenses are in assets/icons/. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="duo-icon-arrow-up-right" viewBox="0 0 24 24"><path d="M17 7l-10 10"/><path d="M8 7l9 0l0 9"/></symbol>
+    <symbol id="duo-icon-player-play" viewBox="0 0 24 24"><path d="M7 4v16l13 -8l-13 -8"/></symbol>
+    <symbol id="duo-icon-timeline" viewBox="0 0 24 24"><path d="M4 16l6 -7l5 5l5 -6"/><path d="M14 14a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M9 9a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M3 16a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M19 8a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></symbol>
+    <symbol id="duo-icon-arrow-up" viewBox="0 0 24 24"><path d="M12 5l0 14"/><path d="M18 11l-6 -6"/><path d="M6 11l6 -6"/></symbol>
+    <symbol id="duo-icon-x" viewBox="0 0 24 24"><path d="M18 6l-12 12"/><path d="M6 6l12 12"/></symbol>
+    <symbol id="duo-icon-arxiv" viewBox="0 0 74.492 100.25"><path d="M586.72,255.616a3.377,3.377,0,0,1,.448.031,5.917,5.917,0,0,1,3.581,2.79c.454,1.116.314,2.023-1.315,4.141L563.168,293.6l-8.558-10.047,29.348-26.616a4.406,4.406,0,0,1,2.762-1.321m0-1.5a5.766,5.766,0,0,0-3.69,1.643l-.041.032-.038.035L553.6,282.442l-1.077.977.943,1.107,8.558,10.047,1.145,1.344,1.141-1.348,26.267-31.022.022-.027.022-.028c1.574-2.046,2.327-3.622,1.516-5.619a7.309,7.309,0,0,0-4.779-3.714,5.083,5.083,0,0,0-.64-.043Z" transform="translate(-526.086 -245.559)"/><path d="M553.423,284.593l8.977,10.558L597.911,337.9c.873,1.093,1.419,2.186,1.047,3.418a4.092,4.092,0,0,1-2.721,2.837,3.557,3.557,0,0,1-1.045.159,4,4,0,0,1-2.687-1.124L548.01,300.808c-3.5-3.5-2.971-8.151.436-11.558l4.977-4.657m.124-2.17L552.4,283.5l-4.976,4.656c-4.192,4.191-4.372,9.816-.473,13.714l44.521,42.4a5.485,5.485,0,0,0,3.722,1.538,5.1,5.1,0,0,0,1.483-.224,5.59,5.59,0,0,0,3.719-3.838,5.176,5.176,0,0,0-1.31-4.788l-35.53-42.767-8.988-10.571-1.019-1.2Z" transform="translate(-526.086 -245.559)"/><path d="M562.4,295.151l9.556,11.5,5.761-5.356a7.926,7.926,0,0,0,.041-11.743l-43.7-41.923s-1.671-2.029-3.437-2.071a4.49,4.49,0,0,0-4.23,2.718c-.688,1.651-.194,2.809,1.315,4.97l29.306,35.565Z" transform="translate(-526.086 -245.559)"/><path d="M553.7,306.223l-17.116,21.024c-1.255,1.337-2.032,3.683-1.331,5.367a4.587,4.587,0,0,0,4.287,2.841,4.087,4.087,0,0,0,3.082-1.523l20.328-18.9Z" transform="translate(-526.086 -245.559)"/></symbol>
+    <symbol id="duo-icon-github" viewBox="0 0 24 24"><path d="M5.315 2.1c.791 -.113 1.9 .145 3.333 .966l.272 .161l.16 .1l.397 -.083a13.3 13.3 0 0 1 4.59 -.08l.456 .08l.396 .083l.161 -.1c1.385 -.84 2.487 -1.17 3.322 -1.148l.164 .008l.147 .017l.076 .014l.05 .011l.144 .047a1 1 0 0 1 .53 .514a5.2 5.2 0 0 1 .397 2.91l-.047 .267l-.046 .196l.123 .163c.574 .795 .93 1.728 1.03 2.707l.023 .295l.007 .272c0 3.855 -1.659 5.883 -4.644 6.68l-.245 .061l-.132 .029l.014 .161l.008 .157l.004 .365l-.002 .213l-.003 3.834a1 1 0 0 1 -.883 .993l-.117 .007h-6a1 1 0 0 1 -.993 -.883l-.007 -.117v-.734c-1.818 .26 -3.03 -.424 -4.11 -1.878l-.535 -.766c-.28 -.396 -.455 -.579 -.589 -.644l-.048 -.019a1 1 0 0 1 .564 -1.918c.642 .188 1.074 .568 1.57 1.239l.538 .769c.76 1.079 1.36 1.459 2.609 1.191l.001 -.678l-.018 -.168a5.03 5.03 0 0 1 -.021 -.824l.017 -.185l.019 -.12l-.108 -.024c-2.976 -.71 -4.703 -2.573 -4.875 -6.139l-.01 -.31l-.004 -.292a5.6 5.6 0 0 1 .908 -3.051l.152 -.222l.122 -.163l-.045 -.196a5.2 5.2 0 0 1 .145 -2.642l.1 -.282l.106 -.253a1 1 0 0 1 .529 -.514l.144 -.047l.154 -.03z"/></symbol>
+    <symbol id="duo-icon-huggingface" viewBox="0 0 24 24"><path d="M12.025 1.13c-5.77 0-10.449 4.647-10.449 10.378 0 1.112.178 2.181.503 3.185.064-.222.203-.444.416-.577a.96.96 0 0 1 .524-.15c.293 0 .584.124.84.284.278.173.48.408.71.694.226.282.458.611.684.951v-.014c.017-.324.106-.622.264-.874s.403-.487.762-.543c.3-.047.596.06.787.203s.31.313.4.467c.15.257.212.468.233.542.01.026.653 1.552 1.657 2.54.616.605 1.01 1.223 1.082 1.912.055.537-.096 1.059-.38 1.572.637.121 1.294.187 1.967.187.657 0 1.298-.063 1.921-.178-.287-.517-.44-1.041-.384-1.581.07-.69.465-1.307 1.081-1.913 1.004-.987 1.647-2.513 1.657-2.539.021-.074.083-.285.233-.542.09-.154.208-.323.4-.467a1.08 1.08 0 0 1 .787-.203c.359.056.604.29.762.543s.247.55.265.874v.015c.225-.34.457-.67.683-.952.23-.286.432-.52.71-.694.257-.16.547-.284.84-.285a.97.97 0 0 1 .524.151c.228.143.373.388.43.625l.006.04a10.3 10.3 0 0 0 .534-3.273c0-5.731-4.678-10.378-10.449-10.378M8.327 6.583a1.5 1.5 0 0 1 .713.174 1.487 1.487 0 0 1 .617 2.013c-.183.343-.762-.214-1.102-.094-.38.134-.532.914-.917.71a1.487 1.487 0 0 1 .69-2.803m7.486 0a1.487 1.487 0 0 1 .689 2.803c-.385.204-.536-.576-.916-.71-.34-.12-.92.437-1.103.094a1.487 1.487 0 0 1 .617-2.013 1.5 1.5 0 0 1 .713-.174m-10.68 1.55a.96.96 0 1 1 0 1.921.96.96 0 0 1 0-1.92m13.838 0a.96.96 0 1 1 0 1.92.96.96 0 0 1 0-1.92M8.489 11.458c.588.01 1.965 1.157 3.572 1.164 1.607-.007 2.984-1.155 3.572-1.164.196-.003.305.12.305.454 0 .886-.424 2.328-1.563 3.202-.22-.756-1.396-1.366-1.63-1.32q-.011.001-.02.006l-.044.026-.01.008-.03.024q-.018.017-.035.036l-.032.04a1 1 0 0 0-.058.09l-.014.025q-.049.088-.11.19a1 1 0 0 1-.083.116 1.2 1.2 0 0 1-.173.18q-.035.029-.075.058a1.3 1.3 0 0 1-.251-.243 1 1 0 0 1-.076-.107c-.124-.193-.177-.363-.337-.444-.034-.016-.104-.008-.2.022q-.094.03-.216.087-.06.028-.125.063l-.13.074q-.067.04-.136.086a3 3 0 0 0-.135.096 3 3 0 0 0-.26.219 2 2 0 0 0-.12.121 2 2 0 0 0-.106.128l-.002.002a2 2 0 0 0-.09.132l-.001.001a1.2 1.2 0 0 0-.105.212q-.013.036-.024.073c-1.139-.875-1.563-2.317-1.563-3.203 0-.334.109-.457.305-.454m.836 10.354c.824-1.19.766-2.082-.365-3.194-1.13-1.112-1.789-2.738-1.789-2.738s-.246-.945-.806-.858-.97 1.499.202 2.362c1.173.864-.233 1.45-.685.64-.45-.812-1.683-2.896-2.322-3.295s-1.089-.175-.938.647 2.822 2.813 2.562 3.244-1.176-.506-1.176-.506-2.866-2.567-3.49-1.898.473 1.23 2.037 2.16c1.564.932 1.686 1.178 1.464 1.53s-3.675-2.511-4-1.297c-.323 1.214 3.524 1.567 3.287 2.405-.238.839-2.71-1.587-3.216-.642-.506.946 3.49 2.056 3.522 2.064 1.29.33 4.568 1.028 5.713-.624m5.349 0c-.824-1.19-.766-2.082.365-3.194 1.13-1.112 1.789-2.738 1.789-2.738s.246-.945.806-.858.97 1.499-.202 2.362c-1.173.864.233 1.45.685.64.451-.812 1.683-2.896 2.322-3.295s1.089-.175.938.647-2.822 2.813-2.562 3.244 1.176-.506 1.176-.506 2.866-2.567 3.49-1.898-.473 1.23-2.037 2.16c-1.564.932-1.686 1.178-1.464 1.53s3.675-2.511 4-1.297c.323 1.214-3.524 1.567-3.287 2.405.238.839 2.71-1.587 3.216-.642.506.946-3.49 2.056-3.522 2.064-1.29.33-4.568 1.028-5.713-.624"/></symbol>
+  </svg>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+  <div class="topbar"><header class="site-header wrap">
+    <a class="brand" href="#main" aria-label="Duo home" data-i18n-aria-label="homeLabel"><img src="assets/duo-logo.svg" alt="Duo" width="138" height="46"></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"><span>Menu</span></button>
+    <nav id="primary-navigation" aria-label="Main navigation" data-i18n-aria-label="mainNavigation">
+      <a href="#overview" data-i18n="navOverview">Overview</a>
+      <a href="#experiences" data-i18n="navExperiences">Experiences</a>
+      <a href="#conversations" data-i18n="navMoments">Moments</a>
+      <details class="research-versions" id="research-versions">
+        <summary class="research-versions-toggle"><span data-i18n="navResearch">Research</span></summary>
+        <div class="research-versions-panel">
+          <a class="research-version-link" href="#research" aria-current="true">
+            <span>Duo v1.0</span>
+            <span class="research-version-status" aria-hidden="true" data-i18n="currentVersion">Current</span>
+          </a>
+        </div>
+      </details>
+    </nav>
+    <div class="institute-mark"><img src="assets/ant-research.png" alt="Ant Research" data-i18n-alt="institute" width="264" height="78"></div>
+  </header></div>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-scene" aria-hidden="true"><video id="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-conversation.jpg" data-poster-desktop="assets/hero-conversation.jpg" data-poster-mobile="assets/hero-conversation-mobile.jpg" tabindex="-1"><source data-src="media/hero-conversation.mp4" data-src-mobile="media/hero-conversation-mobile.mp4" type="video/mp4"></video></div>
+      <div class="hero-inner wrap">
+        <div class="hero-copy">
+          <p class="eyebrow" lang="en">Reciprocal World Model</p>
+          <h1 id="hero-title"><img src="assets/duo-logo.svg" alt="Duo" width="1728" height="518"></h1>
+          <p class="hero-title" data-i18n-html="heroResearchTitle">A vivid world<br>A continuing conversation</p>
+        </div>
+        <div class="hero-bottom">
+          <p class="hero-description" data-i18n="heroDescription">Sight, sound, and action in one ongoing interaction.</p>
+          <div class="hero-actions">
+            <button class="hero-link hero-link-primary" type="button" disabled><span class="hero-link-label" data-i18n="watch30">Watch the 30-second film</span><svg class="icon" aria-hidden="true"><use href="#duo-icon-arrow-up-right"></use></svg></button>
+            <a class="hero-link" href="#experiences"><span class="hero-link-label" data-i18n="explore">Explore demos</span><svg class="icon" aria-hidden="true"><use href="#duo-icon-arrow-up-right"></use></svg></a>
+            <div class="hero-resources">
+              <a class="hero-link" href="" target="_blank" rel="noopener" onclick="if (!this.getAttribute('href')) return false;"><svg class="resource-mark" aria-hidden="true"><use href="#duo-icon-arxiv"></use></svg><span class="hero-link-label">Technical Report</span></a>
+              <a class="hero-link" data-resource="github" href="https://github.com/inclusionAI/Duo" target="_blank" rel="noopener" aria-label="GitHub · coming soon" data-i18n-aria-label="githubSoon" title="GitHub · coming soon" data-i18n-title="githubSoon"><svg class="resource-mark" aria-hidden="true"><use href="#duo-icon-github"></use></svg><span class="hero-link-label">GitHub</span></a>
+              <a class="hero-link" data-resource="huggingface" href="https://huggingface.co/inclusionAI/Duo-v1" target="_blank" rel="noopener" aria-label="Hugging Face model · coming soon" data-i18n-aria-label="huggingfaceSoon" title="Hugging Face model · coming soon" data-i18n-title="huggingfaceSoon"><svg class="resource-mark" aria-hidden="true"><use href="#duo-icon-huggingface"></use></svg><span class="hero-link-label">Hugging Face</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="overview section" id="overview" aria-labelledby="overview-title">
+      <div class="overview-inner wrap">
+        <img class="overview-symbol" src="assets/duo-symbol-reversed.svg" alt="" width="64" height="64" aria-hidden="true">
+        <h2 id="overview-title" class="statement" data-i18n-html="overviewTitle">Two voices<br>One shared world</h2>
+        <div class="overview-body"><p data-i18n="overviewBody">Duo explores reciprocal world modeling toward real-time co-presence through participation planning and joint audio-visual generation.</p></div>
+      </div>
+    </section>
+
+    <section class="experiences section wrap" aria-labelledby="experiences-title">
+      <div class="split-heading">
+        <h2 id="experiences-title" data-i18n="experiencesTitle">Shared experiences</h2>
+        <p data-i18n="experiencesBody">Watch how people and generated characters respond to each other as they pass objects, play games, and change scenes.</p>
+      </div>
+      <div class="demo-workspace" id="experiences">
+        <div class="demo-navigation">
+          <button type="button" class="icon-button demo-step" hidden id="demo-prev" aria-label="Previous case" data-i18n-aria-label="prevCase" aria-controls="demo-panel"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+          <div class="demo-tabs" role="tablist" aria-label="Project demos" data-i18n-aria-label="demoList" id="demo-tabs" aria-orientation="horizontal"></div>
+          <button type="button" class="icon-button demo-step" hidden id="demo-next" aria-label="Next case" data-i18n-aria-label="nextCase" aria-controls="demo-panel"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+        </div>
+        <div class="demo-workspace-body" id="demo-panel" role="tabpanel" aria-labelledby="demo-tab-0" tabindex="0">
+          <div class="demo-player" id="demo-player-shell">
+            <video id="demo-video" playsinline preload="metadata" poster="assets/demo-final-03.jpg?v=6a5fde079641" aria-label="A drink passed across the call."><source src="media/demo-final-03.mp4?v=6a5fde079641" type="video/mp4"></video>
+            <button class="video-play-toggle" id="demo-play-toggle" type="button" aria-label="Play video" aria-controls="demo-video">
+              <span class="video-play-disc"><svg class="icon" aria-hidden="true"><use href="#duo-icon-player-play"></use></svg></span>
+            </button>
+            <input class="video-progress" id="demo-progress" type="range" min="0" max="0" step="any" value="0" aria-label="Video progress" aria-controls="demo-video" disabled>
+            <span class="moment-watermark" id="demo-language" lang="zh">中文</span>
+            <p class="media-error" id="demo-error" hidden data-i18n="mediaError">This video could not load. Try opening the video file directly.</p>
+          </div>
+          <div class="demo-story">
+            <div class="demo-story-top"><h3 id="demo-title"></h3><p id="demo-description"></p></div>
+            <div class="moments"><p class="moment-label"><svg class="icon" aria-hidden="true"><use href="#duo-icon-timeline"></use></svg><span data-i18n="keyMoments">Moments</span></p><div class="moment-grid" id="demo-moments"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="conversations section wrap" id="conversations" aria-labelledby="conversations-title">
+      <div class="split-heading"><h2 id="conversations-title" data-i18n="conversationsTitle">Shared moments</h2><p data-i18n="conversationsBody">Explore everyday exchanges, from practical guidance and shared plans to moments of companionship.</p></div>
+      <div class="conversation-toolbar"><div class="conversation-filters" id="conversation-filters" role="group" aria-label="Filter shared moments by theme" data-i18n-aria-label="filterLabel"></div><p class="sr-only" id="conversation-count" role="status" aria-live="polite" aria-atomic="true"></p></div>
+      <div class="conversation-grid" id="conversation-grid"></div>
+    </section>
+
+  </main>
+  <footer class="site-footer wrap" id="research">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a class="footer-wordmark" href="#main" aria-label="Duo home" data-i18n-aria-label="homeLabel"><img src="assets/duo-logo.svg" alt="Duo" width="120" height="36"></a>
+        <p data-i18n-html="heroResearchTitle">A vivid world<br>A continuing conversation</p>
+      </div>
+      <nav class="footer-nav" aria-label="Explore Duo" data-i18n-aria-label="exploreLabel">
+        <h2 data-i18n="footerExplore">Explore</h2>
+        <div class="footer-nav-links">
+          <a href="#experiences" data-i18n="footerExperiences">Experiences</a>
+          <a href="#conversations" data-i18n="footerMoments">Moments</a>
+          <a data-resource="github" href="https://github.com/inclusionAI/Duo" target="_blank" rel="noopener" title="GitHub · coming soon" data-i18n-title="githubSoon">GitHub</a>
+          <a data-resource="huggingface" href="https://huggingface.co/inclusionAI/Duo" target="_blank" rel="noopener" title="Hugging Face model · coming soon" data-i18n-title="huggingfaceSoon">Hugging Face</a>
+        </div>
+      </nav>
+      <div class="footer-research">
+        <h2 data-i18n="technicalReport">Technical report</h2>
+        <p class="footer-report-title"><cite lang="en">Duo: A Reciprocal World Model for Full-Duplex Interaction</cite></p>
+        <details class="citation-details" id="citation-details">
+          <summary data-i18n="citeWork">Cite this work</summary>
+          <div class="citation-content">
+            <div class="citation-tools"><button class="footer-text-action" id="copy-citation" type="button" data-i18n="copyBib">Copy BibTeX</button><a class="footer-text-action" href="research/duo.bib?v=c609d8d-github" download="duo.bib" data-i18n="downloadBib">Download .bib</a><span id="citation-status" role="status" aria-live="polite"></span></div>
+            <pre><code id="citation-code" lang="en">@misc{duo_reciprocal_world_models,
+  title = {{Duo}: A Reciprocal World Model for Full-Duplex Interaction},
+  author = {Hengyuan Cao and Biao Gong and Guoshan Lu and
+    Qiyuan Zhang and Lin Liu and Yiding Tian and
+    Yilei Jiang and Yuxin Ma and Chengzhang Wu and
+    Kun Chen and Yiqian Xie and Ting Liu and
+    Xin Zheng and Xijun Gu and Tianren Ma and
+    Jiancheng Pan and Chi Zhang and Xuzhe Zheng and
+    Siyi Li and Zhenzhong Lan},
+  year = {2026},
+  howpublished = {Technical report},
+  url = {https://github.com/inclusionAI/Duo}
+}</code></pre>
+          </div>
+        </details>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <img class="footer-institute" src="assets/ant-research.png" alt="Ant Research" data-i18n-alt="institute" width="264" height="78">
+      <p class="footer-copyright" data-i18n="copyright">Copyright © 2026 Ant Research</p>
+      <a href="#main" class="footer-text-action back-to-top"><span data-i18n="backToTop">Back to top</span><svg class="icon" aria-hidden="true"><use href="#duo-icon-arrow-up"></use></svg></a>
+    </div>
+  </footer>
+  <dialog class="moment-dialog" id="moment-dialog" aria-labelledby="moment-dialog-title">
+    <button class="icon-button" type="button" id="moment-close" aria-label="Close player" data-i18n-aria-label="closePlayer" autofocus><svg class="icon" aria-hidden="true"><use href="#duo-icon-x"></use></svg></button>
+    <div class="moment-carousel">
+      <button class="moment-neighbor" type="button" id="moment-prev" aria-label="Previous moment"><img alt=""></button>
+      <button class="moment-current" type="button" id="moment-toggle" aria-label="Play video">
+        <video id="moment-player" playsinline preload="none" aria-hidden="true"></video>
+        <span class="moment-watermark" aria-hidden="true"></span>
+      </button>
+      <button class="moment-neighbor" type="button" id="moment-next" aria-label="Next moment"><img alt=""></button>
+      <div class="moment-dialog-caption">
+        <div aria-live="polite" aria-atomic="true">
+          <p class="sr-only" id="moment-dialog-position"></p>
+          <h2 id="moment-dialog-title"></h2>
+        </div>
+        <p id="moment-dialog-description"></p>
+        <p id="moment-player-error" role="status" hidden><span data-i18n="momentError">This video could not load.</span> <a id="moment-player-link" target="_blank" rel="noopener" data-i18n="openVideo">Open the video directly</a><span data-i18n="endPunctuation">.</span></p>
+      </div>
+    </div>
+  </dialog>
+  <div class="sr-only" id="announcer" aria-live="polite"></div>
+</body>
+</html>
