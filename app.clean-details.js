@@ -5,6 +5,7 @@
   const data = window.DUO;
   const lang = 'en';
   let demoIndex = 0;
+  let demos = data.realtimeDemos;
   let conversationFilter = 'all';
   let mediaObserver = null;
   const heroMobile = window.matchMedia('(max-width: 600px)');
@@ -63,12 +64,13 @@
   }
 
   function renderDemo(changeMedia = false) {
-    const demo = data.demos[demoIndex];
+    const demo = demos[demoIndex];
     const copy = demo[lang];
-    setLanguageMark(demoLanguage, demo.language);
+    demoLanguage.hidden = !demo.language;
+    if (demo.language) setLanguageMark(demoLanguage, demo.language);
     // Use the known source shape immediately, then refine it from video metadata.
     $('#demo-panel').style.setProperty('--demo-ratio',String(demo.width && demo.height ? demo.width / demo.height : demo.id === '06' ? 360 / 624 : 540 / 720));
-    $('#demo-tabs').replaceChildren(...data.demos.map((item,index) => {
+    $('#demo-tabs').replaceChildren(...demos.map((item,index) => {
       const tab = document.createElement('button');
       tab.className = 'demo-tab';
       tab.id = `demo-tab-${index}`;
@@ -77,19 +79,21 @@
       tab.setAttribute('aria-selected',String(index === demoIndex));
       tab.setAttribute('aria-controls','demo-panel');
       tab.tabIndex = index === demoIndex ? 0 : -1;
-      const thumbnail = document.createElement('img');thumbnail.src = demoAsset(item,`assets/demo-${item.id}.jpg`);thumbnail.alt = '';thumbnail.width = 36;thumbnail.height = 44;
+      const thumbnail = document.createElement('img');thumbnail.src = demoAsset(item,`assets/demo-${item.id}${item.thumbnailSuffix || ''}.jpg`);thumbnail.alt = '';thumbnail.width = 36;thumbnail.height = 44;
       const label = document.createElement('span');label.textContent = item[lang].tab;tab.append(thumbnail,label);
       tab.addEventListener('click',() => selectDemo(index));
-      tab.addEventListener('keydown',(event) => handleTabKeys(event,index,data.demos.length,selectDemo));
+      tab.addEventListener('keydown',(event) => handleTabKeys(event,index,demos.length,selectDemo));
       return tab;
     }));
     $('#demo-prev').disabled = demoIndex === 0;
-    $('#demo-next').disabled = demoIndex === data.demos.length - 1;
+    $('#demo-next').disabled = demoIndex === demos.length - 1;
     $('#demo-panel').setAttribute('aria-labelledby',`demo-tab-${demoIndex}`);
     $('#demo-title').textContent = copy.title;
     $('#demo-description').textContent = copy.description;
     demoVideo.setAttribute('aria-label',copy.title);
-    $('#demo-moments').replaceChildren(...demo.times.map((seconds,index) => {
+    const moments = $('#demo-moments');
+    moments.parentElement.hidden = !demo.times?.length;
+    moments.replaceChildren(...(demo.times || []).map((seconds,index) => {
       const button = document.createElement('button');
       button.type = 'button';
       button.className = 'moment-button';
@@ -104,7 +108,7 @@
       caption.append(stamp,label);button.append(img,caption);
       button.addEventListener('click',() => {
         pauseOtherVideos(demoVideo);
-        const seek = () => {if (data.demos[demoIndex].id !== demo.id) return;demoVideo.scrollIntoView({block:'center',behavior:'instant'});demoVideo.currentTime = Math.min(seconds,Math.max(0,demoVideo.duration - .1));demoVideo.play().catch(() => announce(t('playError')));};
+        const seek = () => {if (demos[demoIndex].id !== demo.id) return;demoVideo.scrollIntoView({block:'center',behavior:'instant'});demoVideo.currentTime = Math.min(seconds,Math.max(0,demoVideo.duration - .1));demoVideo.play().catch(() => announce(t('playError')));};
         if (demoVideo.readyState >= 1) seek(); else demoVideo.addEventListener('loadedmetadata',seek,{once:true});
       });
       return button;
@@ -118,7 +122,7 @@
     }
   }
   function selectDemo(index, focus = false) {
-    if (!data.demos[index]) return;
+    if (!demos[index]) return;
     const wasFocused = document.activeElement?.getAttribute('role') === 'tab';
     demoIndex = index;
     renderDemo(true);
@@ -131,7 +135,7 @@
       if (tab.left < row.left) tabs.scrollLeft += tab.left - row.left;
       else if (tab.right > row.right) tabs.scrollLeft += tab.right - row.right;
     }
-    announce(`${t('selected')} ${data.demos[index][lang].tab}`);
+    announce(`${t('selected')} ${demos[index][lang].tab}`);
   }
   function handleTabKeys(event,index,length,select) {
     let next = index;
@@ -440,4 +444,17 @@
   }
   updateDemoArrows();
   new ResizeObserver(updateDemoArrows).observe(demoNavigation);
+
+  const experienceModes = $$('.experience-mode button');
+  experienceModes.forEach(button => {
+    button.addEventListener('click', () => {
+      const selectedDemos = button.dataset.mode === 'realtime' ? data.realtimeDemos : data.demos;
+      if (selectedDemos === demos) return;
+      demos = selectedDemos;
+      experienceModes.forEach(option => option.setAttribute('aria-pressed', String(option === button)));
+      demoTabs.scrollLeft = 0;
+      selectDemo(0);
+      updateDemoArrows();
+    });
+  });
 })();

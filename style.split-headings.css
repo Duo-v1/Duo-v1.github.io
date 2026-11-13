@@ -478,6 +478,53 @@ html:has(.moment-dialog[open]) { overflow: hidden; }
 .split-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;margin-bottom:32px}
 .split-heading h2{flex:none;color:var(--ink)}
 .split-heading>p{max-width:510px;color:var(--muted);font-size:16px;line-height:1.8}
+.experience-title-row {
+  --experience-title-size: clamp(30px, 3.25vw, 46px);
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 14px;
+}
+.experience-title-row h2 {
+  flex: 0 1 auto;
+  min-width: 0;
+  font-size: var(--experience-title-size);
+}
+.experience-mode {
+  position: relative;
+  top: calc(var(--experience-title-size) * .12);
+  display: inline-flex;
+  flex: none;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--surface);
+}
+.experience-mode button {
+  min-height: 32px;
+  padding: 0 11px;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.experience-mode button:hover { color: var(--ink); }
+.experience-mode button[aria-pressed='true'] {
+  background: var(--accent);
+  color: var(--bg);
+}
+.experience-mode button:focus-visible { outline-offset: 2px; }
+@media (max-width: 600px) {
+  .experience-title-row {
+    --experience-title-size: clamp(23px, 6.7vw, 30px);
+    gap: 10px;
+  }
+  .experience-mode button { padding-inline: 7px; }
+}
+.demo-player .moment-watermark[hidden]{display:none}
 .film-player {
   position: relative;
   width: min(100%, 1080px, max(480px, calc(69svh * 16 / 9)));

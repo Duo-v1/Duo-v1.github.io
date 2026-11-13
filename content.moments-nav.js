@@ -12,7 +12,10 @@ window.DUO = {
       "overviewTitle": "Two voices<br>One shared world",
       "overviewBody": "Duo explores reciprocal world modeling toward real-time co-presence through participation planning and joint audio-visual generation.",
       "experiencesTitle": "Shared experiences",
-      "experiencesBody": "These examples from training data and offline inference show people and generated characters responding to each other as they pass objects, play games, and change scenes. Real-time full-duplex results will be added soon.",
+      "experiencesBody": "See how people and generated characters respond to each other in real-time (causal-dmd) and offline (bi-direction) demos.",
+      "experienceRealtime": "Real-time",
+      "experienceOffline": "Offline",
+      "experienceMode": "Demo mode",
       "keyMoments": "Moments",
       "conversationsTitle": "Shared moments",
       "conversationsBody": "These examples from the training data show everyday exchanges, including practical guidance, shared planning, and companionship. See the data section of the technical report for details.",
@@ -72,6 +75,9 @@ window.DUO = {
       "overviewBody": "Duo 探索如何让人和生成角色在同一个世界里实时互动。模型规划角色何时、如何参与，并同步生成画面和声音。",
       "experiencesTitle": "共享体验",
       "experiencesBody": "递一杯饮料、玩一局游戏，或换个地方接着聊。看看人与生成角色怎样彼此回应。",
+      "experienceRealtime": "实时",
+      "experienceOffline": "离线",
+      "experienceMode": "案例模式",
       "keyMoments": "关键时刻",
       "conversationsTitle": "共享时刻",
       "conversationsBody": "聊聊怎么养植物，商量一次出游，或分享一个好消息。这里收录了日常对话中的片段。",
@@ -284,6 +290,239 @@ window.DUO = {
         ]
       },
       "mediaVersion": "b9145f141ea5"
+    }
+  ],
+  "realtimeDemos": [
+    {
+      "id": "realtime-overtime-cat",
+      "language": "zh",
+      "width": 576,
+      "height": 576,
+      "thumbnailSuffix": "-thumb",
+      "en": {
+        "tab": "Overtime cat",
+        "title": "Overtime cat",
+        "description": "The caller chats with a cat sitting at a laptop.",
+        "moments": [
+          "Focus on the laptop",
+          "Look up from the screen",
+          "Reply from the desk"
+        ]
+      },
+      "zh": {
+        "tab": "加班小猫",
+        "title": "加班小猫",
+        "description": "真人与坐在笔记本电脑前的小猫聊天。",
+        "moments": [
+          "盯着笔记本电脑",
+          "从屏幕前抬头",
+          "在桌前回应"
+        ]
+      },
+      "mediaVersion": "call-layout-1",
+      "times": [
+        2,
+        10,
+        16
+      ]
+    },
+    {
+      "id": "realtime-anime-girl",
+      "language": "zh",
+      "width": 576,
+      "height": 576,
+      "thumbnailSuffix": "-thumb",
+      "en": {
+        "tab": "Anime girl",
+        "title": "Anime girl",
+        "description": "The caller talks with an anime character.",
+        "moments": [
+          "Smile with eyes closed",
+          "Raise an index finger",
+          "Break into a smile"
+        ]
+      },
+      "zh": {
+        "tab": "动漫少女",
+        "title": "动漫少女",
+        "description": "真人与动漫角色对话。",
+        "moments": [
+          "闭眼微笑",
+          "举起食指",
+          "露出笑容"
+        ]
+      },
+      "mediaVersion": "call-layout-1",
+      "times": [
+        3,
+        7,
+        15
+      ]
+    },
+    {
+      "id": "realtime-statue-of-liberty",
+      "language": "en",
+      "width": 576,
+      "height": 596,
+      "thumbnailSuffix": "-thumb",
+      "en": {
+        "tab": "Statue of Liberty",
+        "title": "Statue of Liberty",
+        "description": "The caller talks with an animated Statue of Liberty.",
+        "moments": [
+          "Speak with a hand on her chest",
+          "Break into a laugh",
+          "Smile back at the caller"
+        ]
+      },
+      "zh": {
+        "tab": "自由女神像",
+        "title": "自由女神像",
+        "description": "真人与动起来的自由女神像对话。",
+        "moments": [
+          "手放胸前开口说话",
+          "开怀大笑",
+          "微笑回应来电者"
+        ]
+      },
+      "mediaVersion": "call-layout-1",
+      "times": [
+        5,
+        14,
+        23
+      ]
+    },
+    {
+      "id": "realtime-golden-retriever",
+      "language": "en",
+      "width": 576,
+      "height": 768,
+      "thumbnailSuffix": "-thumb",
+      "en": {
+        "tab": "Golden retriever",
+        "title": "Golden retriever",
+        "description": "A golden retriever responds to the caller from a living room.",
+        "moments": [
+          "Watch the caller",
+          "Wag its tail",
+          "Talk about a morning walk"
+        ]
+      },
+      "zh": {
+        "tab": "金毛犬",
+        "title": "金毛犬",
+        "description": "一只金毛犬在客厅里回应真人。",
+        "moments": [
+          "注视来电者",
+          "摇尾巴",
+          "聊起早上散步"
+        ]
+      },
+      "mediaVersion": "retriever-trim-1",
+      "times": [
+        2,
+        6,
+        8
+      ]
+    },
+    {
+      "id": "realtime-panda",
+      "language": "en",
+      "width": 576,
+      "height": 768,
+      "thumbnailSuffix": "-thumb",
+      "en": {
+        "tab": "Panda",
+        "title": "Panda",
+        "description": "The caller interacts with a panda in a bamboo grove.",
+        "moments": [
+          "Lift a paw",
+          "Touch its cheek",
+          "“I like it”"
+        ]
+      },
+      "zh": {
+        "tab": "熊猫",
+        "title": "熊猫",
+        "description": "真人与竹林里的熊猫互动。",
+        "moments": [
+          "抬起前爪",
+          "轻触脸颊",
+          "熊猫说「我喜欢」"
+        ]
+      },
+      "mediaVersion": "panda-trim-1",
+      "times": [
+        7,
+        13,
+        18
+      ]
+    },
+    {
+      "id": "realtime-golden-retriever-followup",
+      "language": "zh",
+      "width": 576,
+      "height": 414,
+      "thumbnailSuffix": "-thumb",
+      "en": {
+        "tab": "Golden retriever · Take 2",
+        "title": "A favorite from Journey to the West",
+        "description": "A golden retriever tells the caller why Bajie is its favorite character.",
+        "moments": [
+          "Ask about Journey to the West",
+          "Name Bajie",
+          "Explain the choice"
+        ]
+      },
+      "zh": {
+        "tab": "金毛犬 · 第二段",
+        "title": "最喜欢的西游角色",
+        "description": "金毛犬解释为什么最喜欢猪八戒。",
+        "moments": [
+          "问起《西游记》",
+          "选出猪八戒",
+          "解释喜欢的原因"
+        ]
+      },
+      "mediaVersion": "caller-crop-1",
+      "times": [
+        3,
+        9,
+        15
+      ]
+    },
+    {
+      "id": "realtime-seaside-conversation",
+      "language": "zh",
+      "width": 576,
+      "height": 768,
+      "thumbnailSuffix": "-thumb",
+      "en": {
+        "tab": "Seaside conversation",
+        "title": "An interrupted recital",
+        "description": "The caller interrupts a recital and asks for a joke instead.",
+        "moments": [
+          "Begin the recital",
+          "Ask her to stop",
+          "Start a joke"
+        ]
+      },
+      "zh": {
+        "tab": "海边对话",
+        "title": "被打断的朗诵",
+        "description": "来电者打断朗诵，改请对方讲个笑话。",
+        "moments": [
+          "开始朗诵",
+          "请她停下",
+          "开始讲笑话"
+        ]
+      },
+      "mediaVersion": "seaside-inset-2",
+      "times": [
+        5,
+        12,
+        18
+      ]
     }
   ],
   "conversations": [

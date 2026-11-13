@@ -13,9 +13,9 @@
   <link rel="canonical" href="https://jianchengpan.space/duov1-homepage/">
   <link rel="icon" href="assets/duo-symbol.svg?v=brand-blue-1" type="image/svg+xml" sizes="any">
   <link rel="stylesheet" href="assets/manrope-embedded.css">
-  <link rel="stylesheet" href="style.split-headings.css?v=experience-progress">
-  <script src="content.moments-nav.js?v=hero-autoplay-2" defer></script>
-  <script src="app.clean-details.js?v=hero-autoplay-2" defer></script>
+  <link rel="stylesheet" href="style.split-headings.css?v=realtime-first">
+  <script src="content.moments-nav.js?v=seaside-inset-2" defer></script>
+  <script src="app.clean-details.js?v=realtime-first" defer></script>
 </head>
 <body>
   <!-- Inline icon symbols. Tabler Icons and Simple Icons licenses are in assets/icons/. -->
@@ -84,8 +84,14 @@
 
     <section class="experiences section wrap" aria-labelledby="experiences-title">
       <div class="split-heading">
-        <h2 id="experiences-title" data-i18n="experiencesTitle">Shared experiences</h2>
-        <p data-i18n="experiencesBody">These examples from training data and offline inference show people and generated characters responding to each other as they pass objects, play games, and change scenes. Real-time full-duplex results will be added soon.</p>
+        <div class="experience-title-row">
+          <h2 id="experiences-title" data-i18n="experiencesTitle">Shared experiences</h2>
+          <div class="experience-mode" role="group" aria-label="Demo mode" data-i18n-aria-label="experienceMode">
+            <button type="button" data-mode="realtime" aria-pressed="true" aria-controls="experiences" data-i18n="experienceRealtime">Real-time</button>
+            <button type="button" data-mode="offline" aria-pressed="false" aria-controls="experiences" data-i18n="experienceOffline">Offline</button>
+          </div>
+        </div>
+        <p id="experiences-description" data-i18n="experiencesBody">See how people and generated characters respond to each other in real-time (causal-dmd) and offline (bi-direction) demos.</p>
       </div>
       <div class="demo-workspace" id="experiences">
         <div class="demo-navigation">
@@ -95,7 +101,7 @@
         </div>
         <div class="demo-workspace-body" id="demo-panel" role="tabpanel" aria-labelledby="demo-tab-0" tabindex="0">
           <div class="demo-player" id="demo-player-shell">
-            <video id="demo-video" playsinline preload="metadata" poster="assets/demo-final-03.jpg?v=6a5fde079641" aria-label="A drink passed across the call."><source src="media/demo-final-03.mp4?v=6a5fde079641" type="video/mp4"></video>
+            <video id="demo-video" playsinline preload="metadata" poster="assets/demo-realtime-overtime-cat.jpg?v=call-layout-1" aria-label="Overtime cat"><source src="media/demo-realtime-overtime-cat.mp4?v=call-layout-1" type="video/mp4"></video>
             <button class="video-play-toggle" id="demo-play-toggle" type="button" aria-label="Play video" aria-controls="demo-video">
               <span class="video-play-disc"><svg class="icon" aria-hidden="true"><use href="#duo-icon-player-play"></use></svg></span>
             </button>
