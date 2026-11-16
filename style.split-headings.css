@@ -40,19 +40,23 @@ h3{font-size:22px;line-height:1.45;letter-spacing:-.025em}
 .site-header nav :is(a,summary:where(.research-versions-toggle))::after{content:'';position:absolute;inset:auto 0 5px;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .18s}
 .site-header nav :is(a,summary:where(.research-versions-toggle)):is(:hover,:focus-visible){color:#f4f4f1}
 .site-header nav :is(a,summary:where(.research-versions-toggle)):is(:hover,:focus-visible)::after{transform:scaleX(1)}
-.institute-mark{justify-self:end;display:flex;align-items:center}
-.institute-mark img{width:116px;height:auto;object-fit:contain}
+.institute-mark{--institute-logo-height:26px;justify-self:end;display:flex;align-items:center;gap:12px}
+.institute-mark img{height:auto;object-fit:contain;flex:none}
+/* Ant's 78px canvas includes 10px of transparent padding above and below. */
+.institute-mark .institute-ant,.footer-institutes .footer-institute{width:auto;height:calc(var(--institute-logo-height) * 78 / 58)}
+.institute-mark .institute-xinchen,.footer-institutes .footer-xinchen{width:auto;height:calc(var(--institute-logo-height) * .8);filter:grayscale(1)}
+.institute-link{display:inline-flex;align-items:center;flex:none;min-height:44px;border-radius:2px}
+.institute-divider{flex:none;width:1px;height:var(--institute-logo-height);background:rgba(226,234,237,.24)}
 .nav-toggle{display:none;align-items:center;justify-content:center;min-width:64px;min-height:44px;padding:8px 12px;border:1px solid var(--line);border-radius:var(--radius);background:transparent;color:var(--ink);font-size:13px;font-weight:600}
 .nav-toggle:hover{background:rgba(255,255,255,.06)}
 .nav-toggle:active{transform:translateY(1px)}
 .nav-toggle[aria-expanded='true']{background:rgba(255,255,255,.06);border-color:#6b7d85}
-@media(max-width:1100px){.site-header{gap:24px}.site-header nav{gap:22px}}
+@media(max-width:1100px){.site-header{gap:24px}.site-header nav{gap:22px}.institute-mark{--institute-logo-height:24px;gap:10px}}
 @media(max-width:1000px){
  :root{--header-height:68px}
  .site-header{grid-template-columns:auto 1fr auto;gap:20px;height:auto;min-height:var(--header-height)}
  .site-header .brand img{width:88px;height:30px}
  .institute-mark{grid-column:2;grid-row:1}
- .institute-mark img{width:108px}
  .site-header nav{grid-column:1/-1;grid-row:2;flex-wrap:wrap;gap:0 24px;padding-bottom:12px}
  .site-header.nav-ready{height:var(--header-height)}
  .nav-ready .nav-toggle{display:inline-flex;grid-column:3;grid-row:1}
@@ -61,7 +65,8 @@ h3{font-size:22px;line-height:1.45;letter-spacing:-.025em}
  .site-header.nav-ready nav a{padding:12px 0;font-size:14px}
  .site-header.nav-ready nav a::after{inset:auto auto 7px 0;width:24px}
 }
-@media(max-width:380px){.site-header{gap:12px}.site-header .brand img{width:78px;height:28px}.institute-mark img{width:96px}.nav-toggle{padding-inline:10px}}
+@media(max-width:600px){.institute-mark{--institute-logo-height:22px;flex-direction:column;gap:2px}.institute-mark .institute-link{min-height:28px}.institute-mark .institute-divider{display:none}}
+@media(max-width:380px){.site-header{gap:12px}.site-header .brand img{width:78px;height:28px}.nav-toggle{padding-inline:10px}}
 @media(prefers-reduced-motion:reduce){.site-header nav a,.site-header nav a::after{transition:none}}
 
 .header-actions{margin-left:30px}
@@ -385,7 +390,7 @@ h3{font-size:22px;line-height:1.45;letter-spacing:-.025em}
   padding-top: 24px;
   border-top: 1px solid var(--line);
 }
-.footer-institute{grid-area:institute;width:132px;height:auto}
+.footer-institutes{--institute-logo-height:30px;grid-area:institute;display:flex;align-items:center;gap:16px;justify-self:start}
 .footer-bottom .back-to-top{grid-area:back;justify-self:end;font-size:13px}
 .footer-bottom .icon{width:18px;height:18px}
 .site-footer .footer-copyright {
@@ -395,13 +400,14 @@ h3{font-size:22px;line-height:1.45;letter-spacing:-.025em}
   font-size: 13px;
   line-height: 1.6;
 }
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   .footer-bottom {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0,1fr) auto;
     grid-template-areas: "institute back" "copyright copyright";
     row-gap: 12px;
   }
 }
+@media(max-width:600px){.footer-bottom{grid-template-areas:"institute institute" "copyright back";column-gap:16px;row-gap:20px}.footer-institutes{--institute-logo-height:26px;gap:12px}.footer-bottom .footer-copyright{text-align:left;font-size:11px}.footer-bottom .back-to-top{font-size:12px}}
 @media(max-width:1000px){.footer-main{grid-template-columns:1fr 1.8fr;gap:40px 56px}.footer-brand{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:30px}.site-footer .footer-brand p{margin-top:0;max-width:260px;text-align:right}}
 @media(max-width:760px){.overview{padding-block:72px 78px}.overview .statement{font-size:54px}.overview-body p{font-size:17px}.footer-main{gap:36px}.site-footer{padding-top:60px}}
 @media(max-width:600px){.overview{padding-block:64px 68px}.overview-symbol{width:48px;height:48px;margin-bottom:26px}.overview .statement{font-size:clamp(34px,9.2vw,44px)}.overview-body{margin-top:24px}.overview-body p{font-size:16px;line-height:1.85}.site-footer{padding-block:52px 28px}.footer-main{grid-template-columns:1fr;gap:36px}.footer-brand{display:block;grid-column:auto}.site-footer .footer-brand p{margin-top:16px;max-width:260px;text-align:left}.footer-nav-links{display:grid;grid-template-columns:1fr 1fr;column-gap:24px;row-gap:6px}.site-footer .footer-report-title{font-size:24px}.footer-bottom{margin-top:40px;padding-top:20px}.footer-institute{width:120px}.footer-bottom .back-to-top{grid-column:auto;grid-row:auto}.citation-details pre{font-size:11px;padding-left:12px}}
