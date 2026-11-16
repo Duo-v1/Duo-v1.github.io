@@ -721,7 +721,8 @@ window.DUO = {
   ],
   "resources": {
     "github": "https://github.com/inclusionAI/Duo",
-    "huggingface": "https://huggingface.co/collections/inclusionAI/duo-v1"
+    "huggingface": "https://huggingface.co/collections/inclusionAI/duo-v1",
+    "modelscope": "https://www.modelscope.cn/collections/inclusionAI/Duo-v1"
   },
   "conversationCategories": [
     {
