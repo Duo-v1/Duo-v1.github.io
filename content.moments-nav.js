@@ -362,39 +362,6 @@ window.DUO = {
       ]
     },
     {
-      "id": "realtime-statue-of-liberty",
-      "language": "en",
-      "width": 576,
-      "height": 596,
-      "thumbnailSuffix": "-thumb",
-      "en": {
-        "tab": "Statue of Liberty",
-        "title": "Statue of Liberty",
-        "description": "The caller talks with an animated Statue of Liberty.",
-        "moments": [
-          "Speak with a hand on her chest",
-          "Break into a laugh",
-          "Smile back at the caller"
-        ]
-      },
-      "zh": {
-        "tab": "自由女神像",
-        "title": "自由女神像",
-        "description": "真人与动起来的自由女神像对话。",
-        "moments": [
-          "手放胸前开口说话",
-          "开怀大笑",
-          "微笑回应来电者"
-        ]
-      },
-      "mediaVersion": "call-layout-1",
-      "times": [
-        5,
-        14,
-        23
-      ]
-    },
-    {
       "id": "realtime-golden-retriever",
       "language": "en",
       "width": 576,
