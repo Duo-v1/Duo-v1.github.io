@@ -537,14 +537,17 @@ html:has(.moment-dialog[open]) { overflow: hidden; }
   width: min(100%, 1080px, max(480px, calc(69svh * 16 / 9)));
   margin-inline: auto;
 }
-.film-player video {
+.film-player video,
+.film-player iframe {
+  display: block;
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 9;
   object-fit: contain;
   border-radius: var(--radius);
 }
-.film-player video:focus-visible{outline:2px solid var(--accent);outline-offset:-3px}
+.film-player iframe { min-height: 200px; border: 0; background: #000; }
+.film-player :is(video,iframe):focus-visible{outline:2px solid var(--accent);outline-offset:-3px}
 .video-progress {
   --played: 0%;
   --track-fill: linear-gradient(to right, #fff var(--played), rgb(255 255 255 / 42%) var(--played));
